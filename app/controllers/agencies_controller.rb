@@ -27,24 +27,16 @@ class AgenciesController < ApplicationController
   end
 
   def update
-    # if @agency == current_user
-      @agency.update(agency_params)
-      if @agency.errors.any?
-        render :edit
-      else
-        redirect_to @agency
-      end
-    # else
-    #   redirect_to root_path
-    # end
+    @agency.update(agency_params)
+    if @agency.errors.any?
+      render :edit
+    else
+      redirect_to @agency
+    end
   end
 
   def destroy
-    # if @agency == current_user
-      @article.destroy
-    # else
-    #   redirect_to root_path
-    # end
+    @article.destroy
   end
 
   private
