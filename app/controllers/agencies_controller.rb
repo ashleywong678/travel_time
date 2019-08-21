@@ -1,5 +1,7 @@
 class AgenciesController < ApplicationController
   before_action :require_login, except: [:new, :create, :show]
+  before_action :set_agency, only: [:main, :show, :edit, :update, :destroy]
+  before_action :redirect_if_not_auth, only: [:main, :show, :edit, :destroy]
 
   def new #signup
     @agency = Agency.new
@@ -16,38 +18,33 @@ class AgenciesController < ApplicationController
   end
 
   def main #agency's main page
-    set_agency
   end
 
   def show #agency's profile page
-    set_agency
   end
 
   def edit
-    set_agency
   end
 
   def update
-    set_agency
-    if @agency == current_user
+    # if @agency == current_user
       @agency.update(agency_params)
       if @agency.errors.any?
         render :edit
       else
         redirect_to @agency
       end
-    else
-      redirect_to root_path
-    end
+    # else
+    #   redirect_to root_path
+    # end
   end
 
   def destroy
-    set_agency
-    if @agency == current_user
+    # if @agency == current_user
       @article.destroy
-    else
-      redirect_to root_path
-    end
+    # else
+    #   redirect_to root_path
+    # end
   end
 
   private
@@ -58,6 +55,13 @@ class AgenciesController < ApplicationController
 
   def set_agency
     @agency = Agency.find_by(id: params[:id])
+  end
+
+  def redirect_if_not_auth
+    if @agency != current_user
+      flash[:message] = "Sorry, you are not authorized to view this page"
+      redirect_to root_path
+    end
   end
 
 end
