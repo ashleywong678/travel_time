@@ -2,7 +2,7 @@
 // <-----  application styling -----> //
 
 body{
-  background-image: 'beach.jpg';
+  background-image: url(beach.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -31,9 +31,9 @@ li {
 }
 
 // <----- nav bar -----> //
-.nav-bar{
+// .nav-bar{
 
-}
+// }
 .logo{
   width: 140px;
   margin: 0px 10px;
