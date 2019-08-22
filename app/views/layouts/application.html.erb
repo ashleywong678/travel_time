@@ -14,7 +14,7 @@
     <%# nav-bar %>
     <div class='nav-bar'>
     <%# <img alt='TravelTime Logo' class='logo' src='logo.png'> %>
-      <a href='<%=root_path%>'><%= image_tag 'logo.png' %></a>
+      <a href='<%=root_path%>'><%= image_tag 'logo.png', class: 'logo' %></a>
         <%if logged_in?%>
         <%= link_to "Main", agencies_main_path(current_user), class: 'btn right'%>
         <%= link_to "Log Out", logout_path, class: 'btn right' %>
