@@ -80,8 +80,11 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
+<<<<<<< HEAD
     ddtrace (0.30.0)
       msgpack
+=======
+>>>>>>> 4ea04a709370507bd05f2f12081412861f1b5714
     dotenv (2.7.5)
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
@@ -108,7 +111,11 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
+<<<<<<< HEAD
     loofah (2.4.0)
+=======
+    loofah (2.3.1)
+>>>>>>> 4ea04a709370507bd05f2f12081412861f1b5714
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
@@ -147,9 +154,15 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+<<<<<<< HEAD
     public_suffix (4.0.2)
     puma (3.12.2)
     rack (2.0.8)
+=======
+    public_suffix (3.1.1)
+    puma (3.12.2)
+    rack (2.0.7)
+>>>>>>> 4ea04a709370507bd05f2f12081412861f1b5714
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.4.1)
@@ -182,7 +195,11 @@ GEM
       ffi (~> 1.0)
     regexp_parser (1.6.0)
     ruby_dep (1.5.0)
+<<<<<<< HEAD
     rubyzip (2.0.0)
+=======
+    rubyzip (1.3.0)
+>>>>>>> 4ea04a709370507bd05f2f12081412861f1b5714
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -252,7 +269,7 @@ DEPENDENCIES
   omniauth-google-oauth2
   pg (>= 0.18, < 2.0)
   pry
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 5.2.3)
   sass-rails (~> 5.0)
   selenium-webdriver
